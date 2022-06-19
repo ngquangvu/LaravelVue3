@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyRequest;
 use App\Http\Resources\CompanyResource;
 use App\Models\Company;
+use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {

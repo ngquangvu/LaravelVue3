@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCompaniesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->string('address');
-            $table->string('website');
+            $table->string('address')->nullable();
+            $table->string('website')->nullable();
             $table->timestamps();
         });
     }
@@ -32,4 +32,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('companies');
     }
-};
+}
